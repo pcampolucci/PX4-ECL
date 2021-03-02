@@ -399,6 +399,12 @@ public:
 		return _baro_sample_delayed;
 	}
 
+	// Getter for the baro sample on the delayed time horizon
+	flowSample get_flow_sample_delayed()
+	{
+		return _flow_sample_delayed;
+	}
+
 	void print_status();
 
 	static constexpr unsigned FILTER_UPDATE_PERIOD_MS{8};	// ekf prediction period in milliseconds - this should ideally be an integer multiple of the IMU time delta

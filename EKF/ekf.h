@@ -249,6 +249,11 @@ public:
 	// use the latest IMU data at the current time horizon.
 	Quatf calculate_quaternion() const;
 
+	Vector2f get_compensated_flow()
+	{
+		return _flowRadXYcomp;
+	}
+
 private:
 
 	static constexpr uint8_t _k_num_states{24};		///< number of EKF states
